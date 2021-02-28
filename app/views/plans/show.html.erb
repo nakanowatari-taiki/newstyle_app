@@ -1,0 +1,23 @@
+<%# render "shared/header" %>
+<div class="">
+  <p><%= @plan.user.nickname %>さんの投稿一覧</p>
+ <p><%= @plan.part.name%></p>
+ <p><%= @plan.text%></p>
+ <p><%= @plan.date%></p>
+ <%= link_to '編集', edit_plan_path(@plan.id), method: :get %>
+ <%= link_to '削除', plan_path(@plan.id), method: :delete %>
+      <%= form_with(model: [@plan, @comment], local: true) do |form| %>
+        <%= form.text_area :com, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.com %>
+        </p>
+      <% end %>
+    </div>
+  </div>

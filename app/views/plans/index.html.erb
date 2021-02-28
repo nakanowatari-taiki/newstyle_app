@@ -1,0 +1,53 @@
+<%= render "shared/header" %>
+<div class = "main-color">
+<div class = "main-header">
+ <div class = "main">
+   <h2 class = "name" >ようこそ<%= current_user.nickname %>さん</h2>
+   <%= link_to "投稿する", new_plan_path, class: "post" %>
+  </div>
+</div> 
+<div class = "clear"></div>
+<div class = "main-contents">
+  <h2 class = "main-title">投稿一覧</h2>
+   <ul class = "post-list">
+      <% @plans.each do |plan| %>
+      <li class = "list">
+    <div class = "post-info">
+      <h3 class ="user-name">
+       <%= plan.user.nickname%>さん
+      </h3>
+      <div class = "post-data">  
+        <span> <%= plan.date %><br><%= plan.part.name %></span>
+      </div>
+        <div class ="post-text">
+          <%= plan.text %>
+         </div>
+          <%= link_to '削除', plan_path(plan.id), method: :delete,class:"main-button" %>
+          <%= link_to "#{plan.user.nickname}さんのページへ", "/users/#{current_user.id}", method: :get ,class:"main-button"%> 
+    </div>
+     </li>
+  <% end %>
+   </ul>
+</div>  
+</div>
+
+
+
+<%= render "shared/footer" %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

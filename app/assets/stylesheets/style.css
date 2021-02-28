@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+/*ヘッダー部分*/
+.header {
+  height: 56px;
+  width:  100%;
+  box-shadow: 0 0 10px #dddddd;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+}
+
+.header-left a{
+  float: left;
+  height: 40px;
+  margin-top: 8px;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #5a5c5f;
+}
+.header-left a:hover{
+  background-color: #e2f1ff;
+  transition: background-color 0.5s;
+
+}
+.header-button {
+  float: right;
+  line-height: 56px;
+  color: #5a5c5f;
+  margin-left: 5px;
+  font-size: 16px;
+  padding: 0 5px;
+  font-weight: bold;
+ 
+}
+
+.header-right a:hover{
+  background-color: #e2f1ff;
+  transition: background-color 0.5s;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  max-width: 1580px;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ヘッダーここまで*/
+
+/* フッター部分*/
+
+.footer {
+  height: 15vh;
+  background-color: #2f3a44;
+  color: #e8e8e8;
+  padding-top: 20px;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+  padding-top: 50px;
+}
+
+.footer-left p{
+  margin-bottom: 8px;
+}
+
+/* フッターここまで*/
+
+/* トップページ部分 */
+ .main-visual {
+   padding-top:  140px;
+   padding-bottom: 100px;
+   background: url('main.png');
+   background-size: cover;
+   color: #5a5c5f;
+   text-align: left;
+   height: 60vh;
+ }
+
+ .top-title {
+   font-size: 64px;
+   margin-bottom: 10px;
+ }
+
+ .top-subtitle {
+   font-size: 24px;
+   margin-bottom: 60px;
+ }
+ /* トップページここまで*/
+
+ /*ログインページ*/
+ .contact {
+   height: 70vh;
+   padding: 90px 0 60px;
+   color:#5a5c5f;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url('plans.jpg');
+ }
+ .contact-title {
+   margin-bottom: 15px;
+   font-size: 48px;
+ }
+ .field {
+   font-size: 24px;
+   padding: 15px;
+   margin: 10px;
+ }
+ .input {
+   padding: 16px;
+   font-size: 24px;
+   width: 320px;
+ }
+ /*新規登録とログインのボタン*/
+ .button{
+   width: 200px;
+   margin: 0 auto;
+   padding: 15px;
+   border: 1px solid white;
+   background-color: lightblue;
+   color:white;
+   display: block;
+ }
+
+ .button:hover{
+   background-color: blue;
+   transition: background-color 0.5s;
+ }
+/* ログインページここまで*/
+
+/*新規登録ページ*/
+.contents {
+  height: 70vh;
+  padding: 90px 0 60px;
+  color:#5a5c5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('plans.jpg');
+  
+}
+.registration{
+  margin-bottom: 15px;
+  font-size: 48px;
+}
+/*新規登録ページここまで*/
+
+/*メインページ*/
+.main-color{
+  background: url('plans.jpg');
+}
+
+.main-header{
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.name{
+  float: left;
+  font-size: 36px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #5a5c5f;
+  padding-left: 60px;
+}
+
+.post {
+  float: right;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-right: 20px;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  border: 1px solid white;
+  background-color: lightblue;
+  color:white;
+}
+
+.post:hover{
+  background-color: blue;
+  transition: background-color 0.5s;
+}
+
+.main-button {
+  color: #5a5c5f;
+  margin-left: 5px;
+  font-size: 16px;
+  padding: 16px 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-button:hover{
+  background-color: #e2f1ff;
+
+}
+
+.main-contents { 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.main-title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #5a5c5f;
+}
+
+.post-list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  
+}
+
+.post-list>.list {
+  width: 37vh;
+  padding: 1vw;
+  
+}
+
+.post-info {
+  color: #5a5c5f;
+  padding: 1vw;
+}
+.user-name {
+  font-size: 2.5vh;
+  
+}
+.post-data {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-text {
+  width: 33vh;
+  height: 10vh;
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #2f3a44;
+}
+
+/*メインページここまで*/
+
+/*投稿ページ*/
+
+.posts {
+  height: 80vh;
+  padding-top: 60px;
+  display: block;
+  background: url('plans.jpg');
+  color: #5a5c5f;
+  justify-content: center;
+  display: flex;
+}
+
+.post-menu {
+  margin-bottom: 15px;
+  font-size: 48px;
+  color: #5a5c5f;
+}
+.habits{
+  color: #5a5c5f;
+  padding-bottom: 20px;
+}
+.lavel {
+  display: block;
+  font-size: 20px;
+}
+.date-select {
+  display: block;
+  margin: 20px;
+}
+.genre-select{
+  display: block;
+  margin: 20px;
+}
+
+.menu{
+  margin: 15px;
+  width: 100%;
+  font-size: 16px;
+  padding-bottom: 40px;
+  
+}
+/*投稿ページここまで*/
+
+/*マイページ*/
+
+.mypage{
+  background: url('plans.jpg');
+  height: 80vh;
+  padding-top: 60px;
+}
+.mypage-title{
+  font-size: 4vh;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #5a5c5f;
+}
+.mypage-sub-title{
+  font-size: 3vh;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #5a5c5f;
+}

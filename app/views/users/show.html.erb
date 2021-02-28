@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+<div class="mypage">
+ <h1 class ="mypage-title">大事なのは日々の積み重ね！！</h1>
+   <h2 class ="mypage-sub-title"><%= @nickname %>さんの頑張りを確認しよう！！</h2>
+   <ul class = "post-list">
+    <% @plans.each do |plan| %>
+     <li class = "list">
+  <div class ="post-info">
+    <h3 class ="user-name">
+      <%= plan.date %>の投稿
+    </h3>
+  <div class = "post-date">  
+   <%= plan.part.name%>
+   </div>
+   <div class ="post-text">
+  <%= plan.text%>
+  </div>
+  </li>
+ <% end %>
+ </ul>
+</div>
+
+
+
+<%= render "shared/footer" %>
