@@ -1,23 +1,29 @@
-<%# render "shared/header" %>
-<div class="">
-  <p><%= @plan.user.nickname %>さんの投稿一覧</p>
- <p><%= @plan.part.name%></p>
- <p><%= @plan.text%></p>
- <p><%= @plan.date%></p>
- <%= link_to '編集', edit_plan_path(@plan.id), method: :get %>
- <%= link_to '削除', plan_path(@plan.id), method: :delete %>
+<%= render "shared/header" %>
+<div class="main-comments">
+  <h2 class = "com-title" ><%= @plan.user.nickname %>さんの投稿にコメントしよう</h2>
+
+   <div class = "com-main"> 
+       <div class = "comments-text">  
+        <span><%= @plan.date%><br><%= @plan.part.name%><br><%= @plan.text%></span>
+       </div>
+   </div> 
+
+
       <%= form_with(model: [@plan, @comment], local: true) do |form| %>
-        <%= form.text_area :com, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.text_area :com, placeholder: "コメントする", rows: "2",class: 'com' %>
+        <%= form.submit "SEND",class: "com-button" %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
         <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"com-table"%>：</strong>
           <%= comment.com %>
         </p>
       <% end %>
     </div>
-  </div>
+</div>
+
+
+<%= render "shared/footer" %>
