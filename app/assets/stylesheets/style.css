@@ -165,6 +165,7 @@
 .main-header{
   padding-top: 50px;
   padding-bottom: 100px;
+  
 }
 
 .name{
@@ -215,6 +216,7 @@
   display: flex;
   flex-direction: column;
   height: 70vh;
+  overflow-y: scroll;
 }
 
 .main-title {
@@ -259,6 +261,8 @@
   position: relative;
   background-color: #f0f0f0;
   border: 1px solid #2f3a44;
+  overflow-y: scroll;
+  padding-left: 10px;
 }
 
 /*メインページここまで*/
@@ -302,7 +306,7 @@
   width: 100%;
   font-size: 16px;
   padding-bottom: 40px;
-  
+  padding-left: 5px;
 }
 /*投稿ページここまで*/
 
@@ -312,6 +316,7 @@
   background: url('plans.jpg');
   height: 80vh;
   padding-top: 60px;
+  overflow-y: scroll;
 }
 .mypage-title{
   font-size: 4vh;
@@ -325,3 +330,67 @@
   font-weight: bold;
   color: #5a5c5f;
 }
+
+/*マイページ*/
+
+/*コメントページ*/
+
+.main-comments{
+  padding-top: 70px;
+  background: url('plans.jpg');
+  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+
+}
+
+.com-title{
+  font-size: 36px;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #5a5c5f;
+  padding-left: 60px;
+}
+
+
+.comments-text{
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px 80px 20px 20px;
+  width: 30%;
+  overflow-y: scroll;
+  display: block;
+  background-color: white;
+ 
+}
+
+.com-button{
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  border: 1px solid white;
+  background-color: lightblue;
+  color:white;
+  display: block;
+}
+.com{
+  display:block;
+  margin: 20px;
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+}
+
+
+ .com-button:hover{
+   background-color: blue;
+   transition: background-color 0.5s;
+ }
+
+ .com-table{
+  margin-left: 20px;
+  text-decoration: none;
+  color: #5a5c5f;
+ }
