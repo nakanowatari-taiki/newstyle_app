@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   before_action :move_to_index, except: [:index]
+  before_action :set_plan, only: [ :edit, :show]
   def index
     get_week
     @plans = Plan.order("created_at DESC")
@@ -13,6 +14,7 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
     if @plan.save
        redirect_to action: :index
+       flash[:notice] = "投稿しました"
     else
       render :new
     end
@@ -22,10 +24,26 @@ class PlansController < ApplicationController
     plan = Plan.find(params[:id])
     plan.destroy
     redirect_to action: :index
+    flash[:notice] = "投稿を削除しました"
+  end
+
+  def edit
+    if current_user.id == @plan.user_id || @plan.text.blank? 
+      render template: "plans/edit"
+    else
+      redirect_to root_path
+    end
+  end
+
+  def update
+    plan = Plan.find(params[:id])
+    plan.update(plan_params)
+    redirect_to action: :index
+    flash[:notice] = "編集しました"
+    
   end
 
   def show
-    @plan = Plan.find(params[:id])
     @comment = Comment.new
     @comments = @plan.comments.includes(:user)
   end
@@ -37,6 +55,10 @@ class PlansController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index
     end
+  end
+
+  def set_plan
+    @plan = Plan.find(params[:id])
   end
 
   def get_week

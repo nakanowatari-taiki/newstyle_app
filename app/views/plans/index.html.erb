@@ -1,3 +1,4 @@
+
 <%= render "shared/header" %>
 <div class = "main-color">
 <div class = "main-header">
@@ -7,6 +8,10 @@
   </div>
 </div> 
 <div class = "clear"></div>
+<% if flash[:notice]%>
+<h3 class = "flash-message"><%= flash[:notice]%></h3>
+<% end %>
+
 <div class = "main-contents">
   <h2 class = "main-title">投稿一覧</h2>
    <ul class = "post-list">
@@ -22,8 +27,8 @@
         <div class ="post-text">
           <%= plan.text %>
         </div>
-          <%= link_to '削除', plan_path(plan.id), method: :delete,class:"main-button" %>
-          <%= link_to "#{plan.user.nickname}さんにコメントしよう！",  plan_path(plan.id), method: :get ,class:"main-button"%> 
+         
+          <%= link_to "#{plan.user.nickname}さんの投稿にコメントしよう！",  plan_path(plan.id), method: :get ,class:"main-button"%> 
     </div>
      </li>
   <% end %>

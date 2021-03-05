@@ -3,5 +3,10 @@ class Plan < ApplicationRecord
   belongs_to :part
   belongs_to :user
   has_many   :comments
+
+  with_options presence: true do
   validates :part_id, numericality: { other_than: 1 } 
+  validates :date 
+  validates :text
+  end
 end
