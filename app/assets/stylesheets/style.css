@@ -4,10 +4,10 @@
 .header {
   height: 56px;
   width:  100%;
-  box-shadow: 0 0 10px #dddddd;
-  background-color: #f0f0f0;
+  background: url('plans.jpg');
   position: fixed;
   top: 0;
+  box-shadow: 0 0 10px #dddddd;
 }
 
 .header-left a{
@@ -86,6 +86,7 @@
    color: #5a5c5f;
    text-align: left;
    height: 60vh;
+
  }
 
  .top-title {
@@ -107,7 +108,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background: url('plans.jpg');
+   background: url('b077.jpg');
  }
  .contact-title {
    margin-bottom: 15px;
@@ -148,7 +149,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('plans.jpg');
+  background: url('b077.jpg');
+  overflow-y: scroll;
   
 }
 .registration{
@@ -159,13 +161,15 @@
 
 /*メインページ*/
 .main-color{
-  background: url('plans.jpg');
+  background: url('b077.jpg');
+  overflow-y: scroll;
+
 }
 
 .main-header{
   padding-top: 50px;
   padding-bottom: 100px;
-  
+
 }
 
 .name{
@@ -216,7 +220,7 @@
   display: flex;
   flex-direction: column;
   height: 70vh;
-  overflow-y: scroll;
+  
 }
 
 .main-title {
@@ -273,7 +277,7 @@
   height: 80vh;
   padding-top: 60px;
   display: block;
-  background: url('plans.jpg');
+  background: url('b077.jpg');
   color: #5a5c5f;
   justify-content: center;
   display: flex;
@@ -313,7 +317,7 @@
 /*マイページ*/
 
 .mypage{
-  background: url('plans.jpg');
+  background: url('b077.jpg');
   height: 80vh;
   padding-top: 60px;
   overflow-y: scroll;
@@ -337,12 +341,12 @@
 
 .main-comments{
   padding-top: 70px;
-  background: url('plans.jpg');
+  background: url('b077.jpg');
   display: block;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  overflow-y: scroll;
 
 }
 
@@ -360,7 +364,6 @@
   margin: 20px;
   padding: 20px 80px 20px 20px;
   width: 30%;
-  overflow-y: scroll;
   display: block;
   background-color: white;
  
@@ -392,5 +395,28 @@
  .com-table{
   margin-left: 20px;
   text-decoration: none;
-  color: #5a5c5f;
+  color: black;
  }
+
+ .comments{
+   color: #5a5c5f;
+   background: url('plans.jpg');
+   overflow-y: scroll;
+   height: 300px;
+ }
+
+ .com-plan{
+   font-size: 20px;
+   padding-left: 10px;
+   color: black;
+ }
+ /*コメントページここまで*/
+
+ /*flash-messages*/
+
+ .flash-message{
+   background-color: skyblue;
+   color: #5a5c5f;
+   text-align: center;
+ }
+ /*flash-messages*/

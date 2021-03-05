@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :plans
   has_many :comments
+
+  with_options presence: true do
+    validates :nickname
+  end
 end

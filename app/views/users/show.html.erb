@@ -15,10 +15,13 @@
    <div class ="post-text">
   <%= plan.text%>
   </div>
+  <%= link_to '編集', edit_plan_path(plan.id), method: :get, class:"main-button"%>
+   <%= link_to '削除', plan_path(plan.id), method: :delete,class:"main-button" %>
   </li>
  <% end %>
  </ul>
 </div>
+
 
 
 
