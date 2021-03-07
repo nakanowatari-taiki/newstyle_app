@@ -40,7 +40,6 @@ class PlansController < ApplicationController
     plan.update(plan_params)
     redirect_to action: :index
     flash[:notice] = "編集しました"
-    
   end
 
   def show
