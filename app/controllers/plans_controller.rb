@@ -40,13 +40,15 @@ class PlansController < ApplicationController
     plan.update(plan_params)
     redirect_to action: :index
     flash[:notice] = "編集しました"
-    
   end
 
   def show
     @comment = Comment.new
     @comments = @plan.comments.includes(:user)
   end
+
+  
+
   private
   def plan_params
     params.require(:plan).permit(:text, :date, :part_id).merge(user_id: current_user.id)

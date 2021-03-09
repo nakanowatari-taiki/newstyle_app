@@ -11,11 +11,11 @@
 <% if flash[:notice]%>
 <h3 class = "flash-message"><%= flash[:notice]%></h3>
 <% end %>
-
 <div class = "main-contents">
   <h2 class = "main-title">投稿一覧</h2>
    <ul class = "post-list">
       <% @plans.each do |plan| %>
+      
       <li class = "list">
     <div class = "post-info">
       <h3 class ="user-name">
@@ -27,14 +27,23 @@
         <div class ="post-text">
           <%= plan.text %>
         </div>
-         
           <%= link_to "#{plan.user.nickname}さんの投稿にコメントしよう！",  plan_path(plan.id), method: :get ,class:"main-button"%> 
-    </div>
-     </li>
+     </div>
+            <div class='star-btn'>
+              <a href = "#" id="like"> ☆ </a>
+              <span class='star-count'>0</span>
+            </div>
+
+    
+
+
+     </li>    
+
   <% end %>
    </ul>
 </div>  
 </div>
+
 
 
 

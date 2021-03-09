@@ -205,7 +205,7 @@
   color: #5a5c5f;
   margin-left: 5px;
   font-size: 16px;
-  padding: 16px 5px;
+  padding: 5px ;
   font-weight: bold;
   text-decoration: none;
 }
@@ -268,6 +268,26 @@
   overflow-y: scroll;
   padding-left: 10px;
 }
+
+
+.star-btn a{
+  height: 3vh;
+  width: 3vh;
+  padding: 1px;
+  margin: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.star-btn a:hover{
+  background-color: #e2f1ff;
+  transition: background-color 0.5s;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+
 
 /*メインページここまで*/
 
