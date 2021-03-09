@@ -270,15 +270,25 @@
 }
 
 
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
+.star-btn a{
+  height: 3vh;
+  width: 3vh;
+  padding: 1px;
+  margin: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.star-btn a:hover{
+  background-color: #e2f1ff;
+  transition: background-color 0.5s;
 }
 
 .star-count {
   font-size: 2vh;
 }
+
+
+
 /*メインページここまで*/
 
 /*投稿ページ*/

@@ -46,6 +46,9 @@ class PlansController < ApplicationController
     @comment = Comment.new
     @comments = @plan.comments.includes(:user)
   end
+
+  
+
   private
   def plan_params
     params.require(:plan).permit(:text, :date, :part_id).merge(user_id: current_user.id)
